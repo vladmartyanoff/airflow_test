@@ -1,8 +1,6 @@
 from datetime import datetime
-from airflow.models import DAG
+from airflow import DAG
 from airflow.operators.python import PythonOperator
-import sys
-sys.path.insert(0, '/airflow/scripts/dag1_scripts')
 from dag1_scripts.task1 import dt_check
 from dag1_scripts.task2 import dt_succes
 
