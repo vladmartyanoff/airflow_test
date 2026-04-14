@@ -7,6 +7,7 @@ insert into amplitude_weather (city_name, temperature, pressure, humidity, times
 select city_name, temperature, pressure, humidity, timestamp
 from ranked_temps
 where rn = 1
+ON CONFLICT (amp_id) DO NOTHING
 
   
 		
